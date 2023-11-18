@@ -9,4 +9,8 @@ class UserProfile(models.Model):
 class UploadedFile(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     file = models.FileField(upload_to='uploads/')
+    title = models.CharField(max_length=255, default='Title')
+    num_images = models.IntegerField(default=0)
+    num_anchor_images = models.IntegerField(default=0)
+    message = models.TextField(default='Message')
     uploaded_at = models.DateTimeField(auto_now_add=True)
