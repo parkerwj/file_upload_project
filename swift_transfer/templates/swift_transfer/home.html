@@ -45,6 +45,7 @@
     {% if user.is_authenticated %}
         <p>Hello, {{ user.username }}! (<a href="{% url 'logout' %}">Logout</a>)</p>
         <a href="{% url 'upload_file' %}">Upload a File</a>
+        <a href="{% url 'file_list' %}">View Your Files</a>
     {% else %}
         <p>You are not logged in. (<a href="{% url 'login' %}">Login</a>)</p>
     {% endif %}

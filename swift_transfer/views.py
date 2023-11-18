@@ -18,3 +18,16 @@ def upload_file(request):
     else:
         form = FileUploadForm()
     return render(request, 'swift_transfer/upload_file.html', {'form': form})
+
+# views.py
+from django.contrib.auth.decorators import login_required
+
+@login_required
+def profile(request):
+    # Your profile view logic here
+    return render(request, 'profile.html')
+
+@login_required
+def file_list(request):
+    files = UploadedFile.objects.filter(user=request.user)
+    return render(request, 'file_list.html', {'files': files})

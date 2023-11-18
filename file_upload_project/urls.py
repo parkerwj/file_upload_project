@@ -20,12 +20,20 @@ from django.urls import path, include
 from django.contrib.auth import views as auth_views
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib.auth.views import LoginView, LogoutView
+from django.urls import path
+from swift_transfer.views import profile, upload_file, file_list
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('swift_transfer.urls')),
-    path('login/', auth_views.LoginView.as_view(template_name='registration/login.html'), name='login'),
-    path('logout/', auth_views.LogoutView.as_view(), name='logout'),
+    # Use Django's built-in LoginView for login
+    path('login/', LoginView.as_view(), name='login'),
+    # Use Django's built-in LogoutView for logout
+    path('logout/', LogoutView.as_view(), name='logout'),
+    # Profile view
+    path('accounts/profile/', profile, name='profile'),
+    path('file_list/', file_list, name='file_list'),
 ]
 
 # Serve media files during development
