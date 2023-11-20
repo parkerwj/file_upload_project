@@ -22,7 +22,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.auth.views import LoginView, LogoutView
 from django.urls import path
-from swift_transfer.views import profile, upload_file, file_list
+from swift_transfer.views import profile, upload_file, file_list, UploadedFileListView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -34,6 +34,7 @@ urlpatterns = [
     # Profile view
     path('accounts/profile/', profile, name='profile'),
     path('file_list/', file_list, name='file_list'),
+    path('files/', UploadedFileListView.as_view(), name='file-list'),
 ]
 
 # Serve media files during development
