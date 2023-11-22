@@ -2,40 +2,19 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h2>Sent Files</h2>
+  <h2>Your Uploaded Files</h2>
   <table>
     <thead>
       <tr>
         <th>Title</th>
-        <th>Recipient</th>
         <th>Uploaded At</th>
       </tr>
     </thead>
     <tbody>
-      {% for file in sent_files %}
+      {% for file in uploaded_files %}
         <tr>
           <td>{{ file.title }}</td>
-          <td>{{ file.created_at }}</td>
-        </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-
-  <h2>Received Files</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Title</th>
-        <th>Sender</th>
-        <th>Uploaded At</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for file in received_files %}
-        <tr>
-          <td>{{ file.title }}</td>
-          <td>{{ file.user.username }}</td>
-          <td>{{ file.created_at }}</td>
+          <td>{{ file.uploaded_at }}</td>
         </tr>
       {% endfor %}
     </tbody>

@@ -41,4 +41,4 @@ class UploadedFileListView(LoginRequiredMixin, ListView):
 @login_required
 def file_list(request):
     files = UploadedFile.objects.filter(user=request.user).order_by('-uploaded_at')
-    return render(request, 'file_list.html', {'files': files})
+    return render(request, 'file_list.html', {'uploaded_files': files})
