@@ -17,9 +17,9 @@ Open your web browser and navigate to [http://localhost:8000](http://localhost:8
 
 The purpose of developing this software is to provide users with a convenient and secure platform for uploading, managing, and organizing their files. The Django framework ensures efficient handling of user requests, enabling dynamic content generation and smooth interaction with the web app.
 
-# [Software Demo Video](http://youtube.link.goes.here)
+# [Software Demo Video](https://youtu.be/mnb5aXypknI)
 
-[Watch the demonstration video](http://youtube.link.goes.here) for a 4-5 minute walkthrough of starting the server, navigating through web pages, and exploring the code.
+[Watch the demonstration video](https://youtu.be/mnb5aXypknI) for a 4-5 minute walkthrough of starting the server, navigating through web pages, and exploring the code.
 
 # Web Pages
 
