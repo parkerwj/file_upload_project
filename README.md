@@ -46,6 +46,6 @@ The purpose of developing this software is to provide users with a convenient an
 
 # Future Work
 
-1. Implement user account authentication and authorization.
-2. Integrate a database for efficient file storage.
+1. Update the view files page to include more helpful information
+2. Add the ability to send the files to a specific user.
 3. Enhance the user interface for a more intuitive experience.
